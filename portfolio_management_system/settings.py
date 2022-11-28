@@ -46,10 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    # 'django.contrib.sessions',
+    'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'django.contrib.sites',
+    'django.contrib.sites',
 
     # Our Apps
     'home',
@@ -64,6 +64,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.twitter',
 ]
+
+# Required for all-auth
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -167,8 +170,7 @@ STATICFILES_DIRS = [
 
 django_heroku.settings(locals())
 
-# Required for all-auth
-SITE_ID = 1
+
 
 
 # Provider specific settings for all-auth apps
